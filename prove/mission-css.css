@@ -1,0 +1,25 @@
+#content {
+    max-width:35%;
+    margin: 40px auto;
+    padding: 40px;
+}
+
+h1, h2 {
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+h2 {
+    font-size:15px;
+    color: rgb(50, 110, 221)
+}
+
+img {
+    display: block;
+    margin: 10px auto;
+    max-width: 10%;
+}
+
+.list {
+    line-height: 2rem;
+}
