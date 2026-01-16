@@ -7,6 +7,7 @@
     <meta name="description" content="This will be a WDD131 home page/portfolio.">
     <meta name="author" content="Pedro Camargo">
     <link rel="stylesheet" href="styles.css">
+    <script src="styles.js" defer></script>
 </head>
 <body>
     <header>
@@ -15,8 +16,15 @@
 
     <main>
         <nav>
-            <a href="ponder\meta-css.html">Meta Tags/CSS</a>
-            <a href="prove\mission.html">Mission Statement</a>
+            <label for="webdevlist">Choose One:</label>
+            <select name="code" id="webdevlist">
+                <option>Choose One:</option>
+                <option value="ponder\meta-css.html">Meta Tags (Ponder)</option>
+                <option value="ponder\dom.html">DOM (Ponder)</option>
+                <option value="prove\mission.html">Mission Statement</option>
+            </select>
+            <!-- <a href="ponder\meta-css.html">Meta Tags/CSS</a>
+            <a href="prove\mission.html">Mission Statement</a> -->
         </nav>
 
     </main>
