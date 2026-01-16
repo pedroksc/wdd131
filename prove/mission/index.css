@@ -11,7 +11,7 @@ h1, h2 {
 
 h2 {
     font-size:15px;
-    color: rgb(50, 110, 221)
+    color: rgb(49, 109, 222)
 }
 
 img {
@@ -19,6 +19,7 @@ img {
     margin: 10px auto;
     max-width: 10%;
 }
+
 
 .list {
     line-height: 2rem;
