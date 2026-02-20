@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Credit Card</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="creditcard.css" />
+    <script src="creditcard.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <form id="paymentForm">
+        <div class="cardWrap">
+          <!-- FRONT OF CARD -->
+          <div class="frontCard">
+            <header class="cardHeader">
+              <p>TOTAL: $199</p>
+              <span class="cardIcon">💳</span>
+            </header>
+
+            <label for="cardNumber">CARD NUMBER</label>
+            <input type="text" id="cardNumber" placeholder="1234 5678 9101 1020" required>
+
+            <div class="bottomRow">
+              <div class="field">
+                <label for="cardHolder">CARD HOLDER</label>
+                <input type="text" id="cardHolder" placeholder="John Doe">
+              </div>
+
+              <div class="field">
+                <label for="mm">EXPIRATION</label>
+                <div class="expRow">
+                  <input type="number" id="mm" placeholder="MM">
+                  <input type="number" id="yy" placeholder="YY">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BACK OF CARD -->
+          <div class="backCard">
+            <div class="magStripe"></div>
+
+            <div class="backContent">
+              <label for="securityNumb">CVC/CVV</label>
+              <input type="text" id="securityNumb" placeholder="XXX">
+            </div>
+          </div>
+        </div>
+
+        <button type="submit">Submit</button>
+        <p id="feedback" aria-live="polite"></p>
+      </form>
+    </main>
+  </body>
 </html>
