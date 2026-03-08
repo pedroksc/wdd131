@@ -1,63 +1,49 @@
-
 const characterCard = {
     name: 'Snortleblat',
     image: 'images/image.png',
     class: 'Swamp Beast Diplomat',
-    health: 100,
-    level: 5,
+    health: 100, 
+    level: 5,    
 
-    healthLevel: function() {
-        healthEl.textContent = health;
-        attackBtn.disabled = health <= 0;
+    
+    takeDamage: function() {
+        this.health = Math.max(0, this.health - 20);
+        this.updateUI();
+        if (this.health <= 0) {
+            setTimeout(() => alert('Your character has been defeated!'), 10);
+        }
     },
 
-    levelValue: function () {
-        levelEl.textContent = level;
+    
+    levelUp: function() {
+        this.level += 1;
+        this.updateUI();
+    },
+
+    
+    updateUI: function() {
+        document.querySelector('#healthValue').textContent = this.health;
+        document.querySelector('#levelValue').textContent = this.level;
+        document.querySelector('#attackButton').disabled = this.health <= 0;
     }
-}
+};
 
 
-
-//HEALTH
-let health = 100;
-const healthEl = document.querySelector('#healthValue');
 const attackBtn = document.querySelector('#attackButton');
-
-attackBtn.addEventListener('click', () => {
-    health = Math.max(0, health - 20);
-    characterCard.healthLevel();
-    if (health <= 0) {
-        // The setTimeout just makes it so the alert doestn’t pop up until after the health has been updated to 0 and the button is disabled.
-        setTimeout(() => alert('Your character has been defeated!'), 10);
-    }
-});
-
-characterCard.healthLevel();
-
-
-//LEVEL
-let level = 5;
-const levelEl = document.querySelector('#levelValue');
 const levelUpBtn = document.querySelector('#levelUpButton');
 
 
+attackBtn.addEventListener('click', () => {
+    characterCard.takeDamage();
+});
 
 levelUpBtn.addEventListener('click', () => {
-    level = level + 1;
-    characterCard.levelValue();
-})
+    characterCard.levelUp();
+});
 
-characterCard.levelValue();
 
-//NAME
-const characterNameEl = document.querySelector('#characterName');
-characterNameEl.textContent = characterCard.name;
-
-//IMAGE
-const characterImageEl = document.querySelector('img');
-characterImageEl.src = characterCard.image;
-characterImageEl.alt = characterCard.name;
-
-//CLASS
-const characterClassEl = document.querySelector('#characterClass');
-characterClassEl.textContent = `Class: ${characterCard.class}`;
+document.querySelector('#characterName').textContent = characterCard.name;
+document.querySelector('img').src = characterCard.image;
+document.querySelector('img').alt = characterCard.name;
+document.querySelector('#characterClass').textContent = `Class: ${characterCard.class}`;
+characterCard.updateUI();
