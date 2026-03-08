@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+h1, h2 {
+    font-family: 'Amatic SC', cursive;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px; /* Optional: limit width for better readability */
+
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.titleLogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.titleLogo h1 {
+    font-size: 5rem;
+    display: flex;
+}
+
+.titleLogo img {
+    width: 200px; /* Adjust as needed */
+    height: auto;
+}
+
+
+.searchBar {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+
+    border: 1px solid black;
+    border-radius: 20px;
+    overflow: hidden; /* keeps button inside rounded edge */
+}
+
+.searchBar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0 12px;
+    font-size: 16px;
+
+    height: 40px;
+    min-width: 0;
+}
+
+.searchBar button {
+    border: none;
+    background: transparent;
+    height: 40px;
+    width: 50px;
+    border-left: 1px solid black; /* divider like the picture */
+    cursor: pointer;
+}
+
+.searchBar img {
+    width: 20px;
+    height: auto;
+}
+
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+.recipeBox {
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid black;
+    border-radius: 17px;
+    justify-content: center;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 20;
+    overflow: hidden;
+
+    max-width: 900px;
+}
+
+.recipeCard {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+.recipeContent {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    gap: 10px;
+}
+
+.recipeCard p {
+    margin: 0;
+    display: block;
+}
+
+.recipeCard h2 {
+    margin: 0;
+    color: rgb(0, 162, 255);
+}
+
+button.dessert {
+    max-width: fit-content;
+    margin-bottom: 20px;
+}
+
+.recipeCard img {
+    max-width: 300px;
+    height: auto;
+}
+
+footer {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 900px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social {
+    display: flex;
+    gap: 10px;
+}
+
+footer img {
+    width: 20px; /* Adjust as needed */
+    height: auto;
+}
+
+@media screen and (max-width: 550px) {
+
+    .titleLogo img {
+        width: 200px;
+        height: auto;
+    }
+
+    .titleLogo h1 {
+        font-size: 3.5rem;
+    }
+
+    .recipeCard p {
+        display: none;
+    }
+
+    .recipeCard {
+        flex-direction: column;
+    }
+
+    .recipeCard img {
+        max-width: 100%;
+    }
+
+    footer {
+        margin-top: 20px;
+        width: 100%;
+        max-width: 900px;
+        
+        /* This makes them stack vertically */
+        display: flex;
+        flex-direction: column-reverse; 
+        align-items: center;
+        gap: 15px; 
+        text-align: center;
+    }
+
+    .social {
+        display: flex;
+    }
+}
