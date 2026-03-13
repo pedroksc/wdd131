@@ -74,7 +74,7 @@ const hikes = [
 
 let hikeContainer = document.querySelector('#hike-container');
 let button = document.querySelector('button');
-// Cycles through all hikes and assigns it randomly to show up on page
+
 
 button.addEventListener('click', search);
 
@@ -102,7 +102,7 @@ function search() {
     })
 }
 
-
+// // Cycles through all hikes and assigns it randomly to show up on page load
 let randomNum = Math.floor(Math.random()* hikes.length);
 console.log(randomNum);
 

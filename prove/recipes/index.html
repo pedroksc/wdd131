@@ -23,7 +23,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-                    
+    <script src="index.js" defer></script>
 </head>
 <body>
     <header>
@@ -33,16 +33,16 @@
         </div>
     </header>
     <main>
-        <form>
+        <form id="searchForm">
             <div class="searchBar">
                 <input type="text" placeholder="Find a Recipe">
-                <button type="submit"><img src="images/images/search.svg" alt="Search"></button>
+                <button class="search" type="submit"><img src="images/images/search.svg" alt="Search"></button>
             </div>
             <hr>
         </form>
         
-        <div class="recipeBox">
-            <div class="recipeCard">
+        <div class="recipeContainer">
+            <!-- <div class="recipeCard">
                 <img src="images/images/apple-crisp.jpg" alt="Apple Crisp">
                 <div class="recipeContent">
                     <button class="dessert">dessert</button>
@@ -59,8 +59,8 @@
                     <span aria-hidden="true" class="icon-star-empty">☆</span>
                     </span>   
                     <p>This apple crisp rescipe is a simple yet delicious fall dessert that's great served with vanilla ice cream.</p>
-                </div>
-            </div>
+                </div> -->
+            <!-- </div> -->
         </div>
     </main>
     <footer>
