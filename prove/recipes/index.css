@@ -82,11 +82,9 @@ hr {
 }
 
 
-.recipeBox {
+.recipeContainer {
     width: fit-content;
     height: fit-content;
-    border: 1px solid black;
-    border-radius: 17px;
     justify-content: center;
     position: relative;
     display: inline-block;
@@ -95,6 +93,12 @@ hr {
     overflow: hidden;
 
     max-width: 900px;
+}
+
+.recipeBox {
+    border: 1px solid black;
+    border-radius: 17px;
+    padding: 20px;
 }
 
 .recipeCard {
