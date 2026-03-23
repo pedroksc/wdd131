@@ -10,33 +10,68 @@ body {
     background-color: #fff;
     line-height: 1.6;
 }
-img {
-    max-width: 100%;
-    display: block;
-}
+
+
 
 img#brand{
-    max-width: 30%;
+    max-width: 12%;
     display: block;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
 
 nav {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;    
+  height: 60px;           
+  background-color: #000;
+  padding: 0 20px;    
+  height: auto;     
 }
 
-nav a {
-    margin-right: 60px;
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-    justify-content: right;
+.nav-links {
+  display: flex;
+  align-items: stretch;    /* Make the link container fill the height */
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;     /* Center text vertically inside the tall link */
+  padding: 0 80px;         /* Space between the words */
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;        /* Makes the color fade in smoothly */
+  font-size: 1.5rem;
+}
+
+
+nav a:link,
+nav a:visited {
+  color: white;
+}
+nav a:hover {
+  color: white;
+  background-color: #7f7f7f;
+}
+
+.hero_section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero_content {
+    background-color: #dcdcdc;
+}
+
+img#home_hero {
+    max-width: 100%;
+}
+
+
+img#footer_brand {
+    max-width: 12%;
+}
+
+footer {
+    background-color: black;
 }
