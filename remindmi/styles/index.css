@@ -488,7 +488,7 @@ li {
 }
 
 input[type="checkbox"] {
-    appearence: none;
+    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     cursor: pointer;
