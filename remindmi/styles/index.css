@@ -75,9 +75,9 @@ nav a:hover {
 }
 
 #home_hero{
-    width: 100%;
+    width: fit-content;
     max-width: 50%;
-    object-fit: cover;;
+    object-fit: cover;
     
     animation: heroReveal 1.6s ease-out forwards;
 }
@@ -317,7 +317,9 @@ img#testimonial_avatar {
     }
 
     #home_hero {
-        max-width: 100%;
+        width: 100%;
+        max-width: fit-content;
+        height: auto;
     }
 
     .testimonial_section {
