@@ -20,9 +20,49 @@ const featureTitles = document.querySelectorAll(".feature_title")
 const featureDescriptions = document.querySelectorAll(".feature_description")
 
 features.forEach((feature, index) => {
-    featureTitles[index].textContent = feature.title;
-    featureDescriptions[index].textContent = feature.description;
+    if (featureTitles[index] && featureDescriptions[index]) {
+        featureTitles[index].textContent = feature.title;
+        featureDescriptions[index].textContent = feature.description;
+    }
 });
+
+document.getElementById("testimonial_text").textContent = '"As a project manager, my brain is usually a mess of deadlines. RemindMi is the first tool that actually prioritizes my sanity alongside my tasks. It doesn\'t just tell me what to do; it shows me when I actually have the energy to do it. It’s like having a personal assistant who actually knows my limits."';
+document.getElementById("testimonial_name").textContent = "Marcus Vargas";
+document.getElementById("testimonial_role").textContent = "Huge Tech Company Senior Project Manager";
+
+document.addEventListener("DOMContentLoaded", () => {
+    const featureCards = document.querySelectorAll(".feature_card");
+
+    const observerOptions = {
+        threshold: .7
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            }
+        })
+    }, observerOptions);
+
+    featureCards.forEach(card => {
+        observer.observe(card);
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // const featureTitles = document.querySelectorAll(".feature_title");
 // const featureDescription = document.querySelectorAll(".feature_description")
